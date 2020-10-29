@@ -25,6 +25,9 @@ void runlength_encode(ac_channel<ac_int<4,false> > &in, ac_channel<ac_int<4,fals
       }
         
     } 
+
+    out.write(data);
+    out.write(count);
   }
 
 }
@@ -50,7 +53,7 @@ int main(){
   do{  
     std::cout << data_out.read() << std::endl;
   }while(data_out.available(1));
-  std::cout<< data_out.read() << std::endl;
+ 
 
 
 
